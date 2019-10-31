@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XBVideoPlayer : NSObject
+
++ (instancetype)sharePlayer;
+- (void)showWithUrlStrAndSuperView:(NSString *)url superView:(UIView *)targetView;
 
 @end
 

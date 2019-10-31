@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		013644EB236AA1D000EF0746 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 013644EA236AA1D000EF0746 /* AppDelegate.m */; };
-		013644EE236AA1D000EF0746 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 013644ED236AA1D000EF0746 /* SceneDelegate.m */; };
 		013644F1236AA1D000EF0746 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013644F0236AA1D000EF0746 /* ViewController.m */; };
 		013644F4236AA1D000EF0746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 013644F2236AA1D000EF0746 /* Main.storyboard */; };
 		013644F6236AA1D200EF0746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 013644F5236AA1D200EF0746 /* Assets.xcassets */; };
@@ -16,6 +15,8 @@
 		013644FC236AA1D200EF0746 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 013644FB236AA1D200EF0746 /* main.m */; };
 		01364506236AA1D300EF0746 /* XBAVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01364505236AA1D300EF0746 /* XBAVPlayerTests.m */; };
 		01364511236AA1D300EF0746 /* XBAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01364510236AA1D300EF0746 /* XBAVPlayerUITests.m */; };
+		01364520236AA21F00EF0746 /* XBVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136451F236AA21F00EF0746 /* XBVideoPlayer.m */; };
+		01364523236AA5D600EF0746 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01364521236AA5D600EF0746 /* SceneDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 		013644E6236AA1D000EF0746 /* XBAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XBAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		013644E9236AA1D000EF0746 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		013644EA236AA1D000EF0746 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		013644EC236AA1D000EF0746 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		013644ED236AA1D000EF0746 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		013644EF236AA1D000EF0746 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		013644F0236AA1D000EF0746 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		013644F3236AA1D000EF0746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,10 @@
 		0136450C236AA1D300EF0746 /* XBAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XBAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01364510236AA1D300EF0746 /* XBAVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAVPlayerUITests.m; sourceTree = "<group>"; };
 		01364512236AA1D300EF0746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0136451E236AA21F00EF0746 /* XBVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBVideoPlayer.h; sourceTree = "<group>"; };
+		0136451F236AA21F00EF0746 /* XBVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBVideoPlayer.m; sourceTree = "<group>"; };
+		01364521236AA5D600EF0746 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		01364522236AA5D600EF0746 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +109,12 @@
 			children = (
 				013644E9236AA1D000EF0746 /* AppDelegate.h */,
 				013644EA236AA1D000EF0746 /* AppDelegate.m */,
-				013644EC236AA1D000EF0746 /* SceneDelegate.h */,
-				013644ED236AA1D000EF0746 /* SceneDelegate.m */,
+				01364522236AA5D600EF0746 /* SceneDelegate.h */,
+				01364521236AA5D600EF0746 /* SceneDelegate.m */,
 				013644EF236AA1D000EF0746 /* ViewController.h */,
 				013644F0236AA1D000EF0746 /* ViewController.m */,
+				0136451E236AA21F00EF0746 /* XBVideoPlayer.h */,
+				0136451F236AA21F00EF0746 /* XBVideoPlayer.m */,
 				013644F2236AA1D000EF0746 /* Main.storyboard */,
 				013644F5236AA1D200EF0746 /* Assets.xcassets */,
 				013644F7236AA1D200EF0746 /* LaunchScreen.storyboard */,
@@ -267,10 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01364520236AA21F00EF0746 /* XBVideoPlayer.m in Sources */,
 				013644F1236AA1D000EF0746 /* ViewController.m in Sources */,
+				01364523236AA5D600EF0746 /* SceneDelegate.m in Sources */,
 				013644EB236AA1D000EF0746 /* AppDelegate.m in Sources */,
 				013644FC236AA1D200EF0746 /* main.m in Sources */,
-				013644EE236AA1D000EF0746 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
