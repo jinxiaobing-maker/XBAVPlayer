@@ -17,6 +17,7 @@
 		01364511236AA1D300EF0746 /* XBAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01364510236AA1D300EF0746 /* XBAVPlayerUITests.m */; };
 		01364520236AA21F00EF0746 /* XBVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136451F236AA21F00EF0746 /* XBVideoPlayer.m */; };
 		01364523236AA5D600EF0746 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01364521236AA5D600EF0746 /* SceneDelegate.m */; };
+		013AE76D236FBFDE0013CE9D /* VideoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013AE76C236FBFDE0013CE9D /* VideoProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		0136451F236AA21F00EF0746 /* XBVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBVideoPlayer.m; sourceTree = "<group>"; };
 		01364521236AA5D600EF0746 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		01364522236AA5D600EF0746 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		013AE76B236FBFDE0013CE9D /* VideoProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoProgressView.h; sourceTree = "<group>"; };
+		013AE76C236FBFDE0013CE9D /* VideoProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				013644F0236AA1D000EF0746 /* ViewController.m */,
 				0136451E236AA21F00EF0746 /* XBVideoPlayer.h */,
 				0136451F236AA21F00EF0746 /* XBVideoPlayer.m */,
+				013AE76B236FBFDE0013CE9D /* VideoProgressView.h */,
+				013AE76C236FBFDE0013CE9D /* VideoProgressView.m */,
 				013644F2236AA1D000EF0746 /* Main.storyboard */,
 				013644F5236AA1D200EF0746 /* Assets.xcassets */,
 				013644F7236AA1D200EF0746 /* LaunchScreen.storyboard */,
@@ -275,6 +280,7 @@
 				01364520236AA21F00EF0746 /* XBVideoPlayer.m in Sources */,
 				013644F1236AA1D000EF0746 /* ViewController.m in Sources */,
 				01364523236AA5D600EF0746 /* SceneDelegate.m in Sources */,
+				013AE76D236FBFDE0013CE9D /* VideoProgressView.m in Sources */,
 				013644EB236AA1D000EF0746 /* AppDelegate.m in Sources */,
 				013644FC236AA1D200EF0746 /* main.m in Sources */,
 			);
