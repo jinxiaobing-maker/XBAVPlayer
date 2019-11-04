@@ -9,13 +9,14 @@
 #import "XBVideoPlayer.h"
 #import <AVKit/AVKit.h>
 #import "VideoProgressView.h"
+#import "CalculateTime.h"
 @interface XBVideoPlayer()
-
 @property(nonatomic,strong,readwrite)AVPlayerItem *videoItem;
 @property(nonatomic,strong,readwrite)AVPlayer *player;
 @property(nonatomic,strong,readwrite)AVPlayerLayer *playerLayer;
 @property(nonatomic,strong,readwrite)UIView *targetView;
 @property(nonatomic,strong,readwrite)VideoProgressView *progressView;
+@property(nonatomic,assign,readwrite)int duration; // 视频总时长
 @end
 
 @implementation XBVideoPlayer
@@ -35,9 +36,10 @@
     _playerLayer.player = _player;
     _playerLayer.frame = CGRectMake(0, 0, targetView.bounds.size.width, targetView.bounds.size.height);
     [targetView.layer addSublayer:_playerLayer];
+    __weak typeof(self) weakSelf = self;
     // 获取播放进度
     [_player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
-        NSLog(@"-----播放进度---%f",CMTimeGetSeconds(time));
+        [weakSelf changeProgressTimeWithPlayed:CMTimeGetSeconds(time)];
     }];
     // 接收播放完成通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePlayEnd) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
@@ -75,7 +77,8 @@
         if (((NSNumber *)[change objectForKey:NSKeyValueChangeNewKey]).integerValue == AVPlayerItemStatusReadyToPlay){
             [_player play];
             // 视频总时长
-            NSLog(@"----duration----%f",CMTimeGetSeconds(_videoItem.duration));
+            self.duration = CMTimeGetSeconds(_videoItem.duration);
+            [self changeProgressTimeWithPlayed:0];
         }
     }
     else if ([keyPath isEqualToString:@"loadedTimeRanges"] && context == @"item.loaded"){
@@ -83,5 +86,8 @@
         CMTimeRange rangeValue = [[change objectForKey:NSKeyValueChangeNewKey][0] CMTimeRangeValue];
         NSLog(@"---rangeValue---%f-------%f",CMTimeGetSeconds(rangeValue.start),CMTimeGetSeconds(rangeValue.duration));
     }
+}
+- (void)changeProgressTimeWithPlayed:(int)playedTime{
+    [self.progressView changeProgressWithPlayedTimeAndDuration:playedTime all:self.duration];
 }
 @end

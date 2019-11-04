@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VideoProgressView : UIView
 
+- (void)changeProgressWithPlayedTimeAndDuration:(int)played all:(int)duration;
 @end
 
 NS_ASSUME_NONNULL_END
