@@ -10,9 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VideoProgressView : UIView
+typedef void(^changeProgress)(float);
+@interface XBVideoProgressView : UIView
+
+@property(nonatomic,copy)changeProgress progressChanged;
 
 - (void)changeProgressWithPlayedTimeAndDuration:(int)played all:(int)duration;
+
 @end
 
 NS_ASSUME_NONNULL_END

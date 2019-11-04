@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharePlayer;
 - (void)showWithUrlStrAndSuperView:(NSString *)url superView:(UIView *)targetView;
-
+- (void)stopPlay;
 @end
 
 NS_ASSUME_NONNULL_END

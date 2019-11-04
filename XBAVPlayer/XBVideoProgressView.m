@@ -6,16 +6,18 @@
 //  Copyright © 2019 youxiao. All rights reserved.
 //
 
-#import "VideoProgressView.h"
+#import "XBVideoProgressView.h"
 #import "CalculateTime.h"
+#import "XBSlider.h"
 
-@interface VideoProgressView()
+@interface XBVideoProgressView()
+<UIGestureRecognizerDelegate>
 @property(nonatomic,strong,readwrite)UILabel *palyedTimeLab;
 @property(nonatomic,strong,readwrite)UILabel *durationLab;
-@property(nonatomic,strong,readwrite)UIView *progressView;
+@property(nonatomic,strong,readwrite)XBSlider *xbSlider;
 @end
 
-@implementation VideoProgressView
+@implementation XBVideoProgressView
 
 #define SELFW self.frame.size.width
 #define SELFH self.frame.size.height
@@ -30,14 +32,22 @@
     return self;
 }
 - (void)initProgressView{
-    _progressView = [[UIView alloc]initWithFrame:CGRectMake(60, (SELFH-5)/2.0, SELFW-120, 5)];
-    _progressView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
-    _progressView.clipsToBounds = YES;
-    _progressView.layer.cornerRadius = 2;
-    [self addSubview:_progressView];
+    _xbSlider = [[XBSlider alloc]initWithFrame:CGRectMake(60, 10, SELFW-120, 20)];
+    [_xbSlider setMinimumValue:0];
+    [_xbSlider setMaximumValue:1];
+    _xbSlider.maximumTrackTintColor = [UIColor blackColor];
+    _xbSlider.tintColor = [UIColor whiteColor];
+    [_xbSlider setThumbImage:[UIImage imageNamed:@"progressCircle"] forState:UIControlStateNormal];
+    [_xbSlider addTarget:self action:@selector(sliderChange:) forControlEvents:UIControlEventValueChanged];
+    [self addSubview:_xbSlider];
+}
+- (void)sliderChange:(XBSlider *)slider{
+    if (self.progressChanged){
+        self.progressChanged(slider.value);
+    }
 }
 - (void)initDurationLa{
-    self.durationLab = [[UILabel alloc]initWithFrame:CGRectMake(SELFW-58, 0, 55, SELFH)];
+    self.durationLab = [[UILabel alloc]initWithFrame:CGRectMake(SELFW-55, 0, 55, SELFH)];
     self.durationLab.text = @"00:00:00";
     self.durationLab.font = [UIFont systemFontOfSize:12];
     self.durationLab.textColor = [UIColor whiteColor];
@@ -53,5 +63,7 @@
 - (void)changeProgressWithPlayedTimeAndDuration:(int)played all:(int)duration{
     self.durationLab.text = [[CalculateTime shareCalTime] changeToHourMinSecWithSeconds:duration-played];
     self.palyedTimeLab.text = [[CalculateTime shareCalTime] changeToHourMinSecWithSeconds:played];
+    float progress = (played*0.1*10.0)/(duration*0.1*10.0);
+    [_xbSlider setValue:progress animated:YES];
 }
 @end

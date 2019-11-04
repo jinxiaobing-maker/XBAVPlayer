@@ -8,14 +8,14 @@
 
 #import "XBVideoPlayer.h"
 #import <AVKit/AVKit.h>
-#import "VideoProgressView.h"
+#import "XBVideoProgressView.h"
 #import "CalculateTime.h"
 @interface XBVideoPlayer()
 @property(nonatomic,strong,readwrite)AVPlayerItem *videoItem;
 @property(nonatomic,strong,readwrite)AVPlayer *player;
 @property(nonatomic,strong,readwrite)AVPlayerLayer *playerLayer;
 @property(nonatomic,strong,readwrite)UIView *targetView;
-@property(nonatomic,strong,readwrite)VideoProgressView *progressView;
+@property(nonatomic,strong,readwrite)XBVideoProgressView *progressView;
 @property(nonatomic,assign,readwrite)int duration; // 视频总时长
 @end
 
@@ -50,8 +50,12 @@
 - (void)initProgressView{
     CGFloat w = _playerLayer.frame.size.width;
     CGFloat h = _playerLayer.frame.size.height;
-    _progressView = [[VideoProgressView alloc]initWithFrame:CGRectMake(0, h-50, w, 40)];
+    _progressView = [[XBVideoProgressView alloc]initWithFrame:CGRectMake(0, h-50, w, 40)];
     [_targetView addSubview:_progressView];
+    __weak typeof(self) weakSelf = self;
+    _progressView.progressChanged = ^(float progress) {
+        [weakSelf.player seekToTime:CMTimeMake(progress*self.duration, 1)];
+    };
 }
 - (void)initPlayItem:(NSString *)urlStr{
     NSURL *videoUrl = [NSURL URLWithString:urlStr];
@@ -67,6 +71,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_videoItem removeObserver:self forKeyPath:@"status"];
     [_videoItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
+    [_playerLayer removeFromSuperlayer];
 }
 - (void)handlePlayEnd{
     [_player seekToTime:CMTimeMake(0, 1)];
@@ -83,8 +88,8 @@
     }
     else if ([keyPath isEqualToString:@"loadedTimeRanges"] && context == @"item.loaded"){
         // 缓冲进度
-        CMTimeRange rangeValue = [[change objectForKey:NSKeyValueChangeNewKey][0] CMTimeRangeValue];
-        NSLog(@"---rangeValue---%f-------%f",CMTimeGetSeconds(rangeValue.start),CMTimeGetSeconds(rangeValue.duration));
+//        CMTimeRange rangeValue = [[change objectForKey:NSKeyValueChangeNewKey][0] CMTimeRangeValue];
+//        NSLog(@"---rangeValue---%f-------%f",CMTimeGetSeconds(rangeValue.start),CMTimeGetSeconds(rangeValue.duration));
     }
 }
 - (void)changeProgressTimeWithPlayed:(int)playedTime{

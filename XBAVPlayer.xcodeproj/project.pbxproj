@@ -17,8 +17,10 @@
 		01364511236AA1D300EF0746 /* XBAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01364510236AA1D300EF0746 /* XBAVPlayerUITests.m */; };
 		01364520236AA21F00EF0746 /* XBVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136451F236AA21F00EF0746 /* XBVideoPlayer.m */; };
 		01364523236AA5D600EF0746 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01364521236AA5D600EF0746 /* SceneDelegate.m */; };
-		013AE76D236FBFDE0013CE9D /* VideoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013AE76C236FBFDE0013CE9D /* VideoProgressView.m */; };
+		013AE76D236FBFDE0013CE9D /* XBVideoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013AE76C236FBFDE0013CE9D /* XBVideoProgressView.m */; };
 		013AE770236FCB2F0013CE9D /* CalculateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 013AE76F236FCB2F0013CE9D /* CalculateTime.m */; };
+		013AE777236FFD580013CE9D /* XBSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 013AE776236FFD580013CE9D /* XBSlider.m */; };
+		013AE779237000C00013CE9D /* progressCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013AE778237000C00013CE9D /* progressCircle@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +61,13 @@
 		0136451F236AA21F00EF0746 /* XBVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBVideoPlayer.m; sourceTree = "<group>"; };
 		01364521236AA5D600EF0746 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		01364522236AA5D600EF0746 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		013AE76B236FBFDE0013CE9D /* VideoProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoProgressView.h; sourceTree = "<group>"; };
-		013AE76C236FBFDE0013CE9D /* VideoProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoProgressView.m; sourceTree = "<group>"; };
+		013AE76C236FBFDE0013CE9D /* XBVideoProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBVideoProgressView.m; sourceTree = "<group>"; };
 		013AE76E236FCB2F0013CE9D /* CalculateTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateTime.h; sourceTree = "<group>"; };
 		013AE76F236FCB2F0013CE9D /* CalculateTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateTime.m; sourceTree = "<group>"; };
+		013AE774236FFD2C0013CE9D /* XBVideoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBVideoProgressView.h; sourceTree = "<group>"; };
+		013AE775236FFD580013CE9D /* XBSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBSlider.h; sourceTree = "<group>"; };
+		013AE776236FFD580013CE9D /* XBSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBSlider.m; sourceTree = "<group>"; };
+		013AE778237000C00013CE9D /* progressCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progressCircle@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,7 @@
 		013644E8236AA1D000EF0746 /* XBAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				013AE778237000C00013CE9D /* progressCircle@3x.png */,
 				013644E9236AA1D000EF0746 /* AppDelegate.h */,
 				013644EA236AA1D000EF0746 /* AppDelegate.m */,
 				01364522236AA5D600EF0746 /* SceneDelegate.h */,
@@ -121,10 +127,12 @@
 				013644F0236AA1D000EF0746 /* ViewController.m */,
 				0136451E236AA21F00EF0746 /* XBVideoPlayer.h */,
 				0136451F236AA21F00EF0746 /* XBVideoPlayer.m */,
-				013AE76B236FBFDE0013CE9D /* VideoProgressView.h */,
-				013AE76C236FBFDE0013CE9D /* VideoProgressView.m */,
+				013AE774236FFD2C0013CE9D /* XBVideoProgressView.h */,
+				013AE76C236FBFDE0013CE9D /* XBVideoProgressView.m */,
 				013AE76E236FCB2F0013CE9D /* CalculateTime.h */,
 				013AE76F236FCB2F0013CE9D /* CalculateTime.m */,
+				013AE775236FFD580013CE9D /* XBSlider.h */,
+				013AE776236FFD580013CE9D /* XBSlider.m */,
 				013644F2236AA1D000EF0746 /* Main.storyboard */,
 				013644F5236AA1D200EF0746 /* Assets.xcassets */,
 				013644F7236AA1D200EF0746 /* LaunchScreen.storyboard */,
@@ -255,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013AE779237000C00013CE9D /* progressCircle@3x.png in Resources */,
 				013644F9236AA1D200EF0746 /* LaunchScreen.storyboard in Resources */,
 				013644F6236AA1D200EF0746 /* Assets.xcassets in Resources */,
 				013644F4236AA1D000EF0746 /* Main.storyboard in Resources */,
@@ -284,9 +293,10 @@
 			files = (
 				01364520236AA21F00EF0746 /* XBVideoPlayer.m in Sources */,
 				013644F1236AA1D000EF0746 /* ViewController.m in Sources */,
+				013AE777236FFD580013CE9D /* XBSlider.m in Sources */,
 				013AE770236FCB2F0013CE9D /* CalculateTime.m in Sources */,
 				01364523236AA5D600EF0746 /* SceneDelegate.m in Sources */,
-				013AE76D236FBFDE0013CE9D /* VideoProgressView.m in Sources */,
+				013AE76D236FBFDE0013CE9D /* XBVideoProgressView.m in Sources */,
 				013644EB236AA1D000EF0746 /* AppDelegate.m in Sources */,
 				013644FC236AA1D200EF0746 /* main.m in Sources */,
 			);
@@ -393,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -445,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
