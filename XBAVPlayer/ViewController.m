@@ -24,12 +24,12 @@
 - (void)addTestBtn{
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     loginBtn.frame = CGRectMake(100, 100, 100, 100);
-    [loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
-    [loginBtn addTarget:self action:@selector(loginBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [loginBtn setTitle:@"注册吧老兄" forState:UIControlStateNormal];
+    [loginBtn addTarget:self action:@selector(registerBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
 }
-- (void)loginBtnClick:(UIButton *)sender{
-    NSLog(@"这就是点击btn");
+- (void)registerBtnClick:(UIButton *)sender{
+    NSLog(@"这就是点击注册吧老兄btn");
 }
 - (void)initPlayer{
     NSString *testUrl = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
