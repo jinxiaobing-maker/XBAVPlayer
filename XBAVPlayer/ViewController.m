@@ -29,7 +29,8 @@
     [self.view addSubview:loginBtn];
 }
 - (void)registerBtnClick:(UIButton *)sender{
-    NSLog(@"这就是点击注册吧老兄btn");
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.view addSubview:btn];
 }
 - (void)initPlayer{
     NSString *testUrl = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
