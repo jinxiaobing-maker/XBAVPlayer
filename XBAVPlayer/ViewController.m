@@ -47,6 +47,10 @@
     UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeSystem];
     btn3.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn3];
+    
+    UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn4.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn4];
 }
 - (void)addTestBtn{
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
