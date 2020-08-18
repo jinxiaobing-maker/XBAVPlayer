@@ -27,9 +27,15 @@
     NSObject *object = [[class alloc] init];
     objc_msgSend(object, NSSelectorFromString(@"handlePeopleMsg:age:"),@"这是名字小冰",100);
     
+
     UITextField *textField = [[UITextField alloc]init];
     textField.text = @"asdsadasd";
     [self.view addSubview:textField];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
+
 }
 - (void)addTestBtn{
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
