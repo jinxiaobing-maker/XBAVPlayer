@@ -3,11 +3,13 @@
 //  XBAVPlayer
 //
 //  Created by youxiao on 2019/10/31.
-//  Copyright © 2019 youxiao. All rights reserved.
+//  Copyright ©  All rights reserved.
 //
 
 #import "ViewController.h"
 #import "XBVideoPlayer.h"
+#import <objc/message.h>
+
 
 #define W [UIScreen mainScreen].bounds.size.width
 @interface ViewController ()
@@ -20,6 +22,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initPlayer];
+    
+    Class class = NSClassFromString(@"People");
+    NSObject *object = [[class alloc] init];
+    objc_msgSend(object, NSSelectorFromString(@"handlePeopleMsg:age:"),@"这是名字小冰",100);
+    
+    
 }
 - (void)addTestBtn{
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
