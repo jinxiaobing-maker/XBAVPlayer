@@ -44,6 +44,7 @@
     btn2.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn2];
 
+
 }
 - (void)addTestBtn{
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
