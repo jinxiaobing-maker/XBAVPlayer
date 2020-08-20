@@ -22,6 +22,7 @@
 		013AE777236FFD580013CE9D /* XBSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 013AE776236FFD580013CE9D /* XBSlider.m */; };
 		013AE779237000C00013CE9D /* progressCircle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013AE778237000C00013CE9D /* progressCircle@3x.png */; };
 		6255963C2463AE460085529B /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 6255963B2463AE460085529B /* People.m */; };
+		62D4AAE224EE0A110090CA06 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D4AAE124EE0A110090CA06 /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		013AE778237000C00013CE9D /* progressCircle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progressCircle@3x.png"; sourceTree = "<group>"; };
 		6255963A2463AE460085529B /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
 		6255963B2463AE460085529B /* People.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		62D4AAE024EE0A110090CA06 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		62D4AAE124EE0A110090CA06 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				01364521236AA5D600EF0746 /* SceneDelegate.m */,
 				013644EF236AA1D000EF0746 /* ViewController.h */,
 				013644F0236AA1D000EF0746 /* ViewController.m */,
+				62D4AAE024EE0A110090CA06 /* Test.h */,
+				62D4AAE124EE0A110090CA06 /* Test.m */,
 				6255963A2463AE460085529B /* People.h */,
 				6255963B2463AE460085529B /* People.m */,
 				0136451E236AA21F00EF0746 /* XBVideoPlayer.h */,
@@ -301,6 +306,7 @@
 				013AE777236FFD580013CE9D /* XBSlider.m in Sources */,
 				6255963C2463AE460085529B /* People.m in Sources */,
 				013AE770236FCB2F0013CE9D /* CalculateTime.m in Sources */,
+				62D4AAE224EE0A110090CA06 /* Test.m in Sources */,
 				01364523236AA5D600EF0746 /* SceneDelegate.m in Sources */,
 				013AE76D236FBFDE0013CE9D /* XBVideoProgressView.m in Sources */,
 				013644EB236AA1D000EF0746 /* AppDelegate.m in Sources */,
