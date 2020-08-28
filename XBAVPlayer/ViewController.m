@@ -63,11 +63,18 @@
     UIButton *btn8 = [UIButton buttonWithType:UIButtonTypeSystem];
     btn8.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn8];
+    
+    UIButton *btn9 = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn9.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn9];
 
     UIButton *btn6 = [UIButton buttonWithType:UIButtonTypeSystem];
     btn6.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn6];
 
+    UIButton *btn10 = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn10.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn10];
 
 }
 - (void)addTestBtn{
