@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "XBVideoPlayer.h"
 #import <objc/message.h>
+#import "Test.h"
 
 
 #define W [UIScreen mainScreen].bounds.size.width
@@ -103,7 +104,12 @@
     UIButton *btn17 = [UIButton buttonWithType:UIButtonTypeSystem];
     btn17.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn17];
-
+    
+    Test *t = [[Test alloc]init];
+    NSMutableArray *tempArr = [[NSMutableArray alloc]initWithCapacity:0];
+    t.tempArr = tempArr;
+    NSLog(@"---1111---%p",t.tempArr);
+    NSLog(@"---2222---%p",tempArr);
 }
 - (void)addTestBtn{
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];

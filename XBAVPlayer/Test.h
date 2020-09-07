@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Test : NSObject
 
+@property(nonatomic,copy)NSMutableArray *tempArr;
 @end
 
 NS_ASSUME_NONNULL_END
