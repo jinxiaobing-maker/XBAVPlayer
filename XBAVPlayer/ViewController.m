@@ -10,6 +10,7 @@
 #import "XBVideoPlayer.h"
 #import <objc/message.h>
 #import "Test.h"
+#import "UIColor+Utils.h"
 
 
 #define W [UIScreen mainScreen].bounds.size.width
@@ -110,7 +111,13 @@
     t.tempArr = tempArr;
     NSLog(@"---1111---%p",t.tempArr);
     NSLog(@"---2222---%p",tempArr);
+    
+    UIView *testView = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    NSString *hex = @"#F0F0F4";
+    testView.backgroundColor = [UIColor colorWithHexString:hex alpha:1];
+    [self.view addSubview:testView];
 }
+
 - (void)addTestBtn{
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     loginBtn.frame = CGRectMake(100, 100, 100, 100);
