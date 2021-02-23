@@ -116,6 +116,8 @@
     NSString *hex = @"#F0F0F4";
     testView.backgroundColor = [UIColor colorWithHexString:hex alpha:1];
     [self.view addSubview:testView];
+    
+    [self.view addSubview:testView];
 }
 
 - (void)addTestBtn{
