@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#define ENV 1
+#define ENV 2
 @interface AppDelegate ()
 
 @end
