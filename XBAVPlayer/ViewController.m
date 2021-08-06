@@ -107,6 +107,8 @@
     UIButton *btn19 = [UIButton buttonWithType:UIButtonTypeSystem];
     btn19.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn19];
+    
+    NSLog(@"123456789");
 }
 - (void)addTestBtn{
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
