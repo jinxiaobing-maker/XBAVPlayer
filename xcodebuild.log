@@ -1,0 +1,8 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild analyze
+
+note: Using new build system
+note: Planning build
+note: Constructing build description
+error: No profiles for 'XB.XBAVPlayer' were found: Xcode couldn't find any iOS App Development provisioning profiles matching 'XB.XBAVPlayer'. Automatic signing is disabled and unable to generate a profile. To enable automatic signing, pass -allowProvisioningUpdates to xcodebuild. (in target 'XBAVPlayer' from project 'XBAVPlayer')
+

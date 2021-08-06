@@ -1,0 +1,6 @@
+framework module Pods_XBAVPlayerTests {
+  umbrella header "Pods-XBAVPlayerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
